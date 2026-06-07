@@ -92,6 +92,6 @@ public sealed partial class SolicitorHtmlParser(IEnumerable<IFieldExtractor> ext
             .AsReadOnly();
     }
 
-    [GeneratedRegex(@"hold the following", RegexOptions.IgnoreCase, "en-GB")]
+    [GeneratedRegex("hold the following", RegexOptions.IgnoreCase, "en-GB")]
     private static partial Regex QualityMarksPretenseRegex();
 }
