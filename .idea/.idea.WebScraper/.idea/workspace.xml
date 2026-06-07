@@ -15,19 +15,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebScraper.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebScraper/src/Services/ScrapeException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebScraper/src/Services/SolicitorScraperService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebScraper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebScraper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/WebScraper.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/WebScraper.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Configuration/ScraperConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Configuration/ScraperConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Extractors/FieldExtractors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Extractors/FieldExtractors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Models/ScrapeResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Models/ScrapeResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Parsers/IHtmlParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Parsers/IHtmlParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Parsers/SolicitorHtmlParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Parsers/SolicitorHtmlParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Services/ScraperService.cs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/Extractors/FieldExtractorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/Parsers/SolicitorHtmlParserTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/Services/SolicitorScraperServiceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/WebScraper.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/.msCoverageSourceRootsMapping_WebScraper.Tests" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/CoverletSourceRootsMapping_WebScraper.Tests" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.TestPlatform.CommunicationUtilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.TestPlatform.CoreUtilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.TestPlatform.CrossPlatEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.TestPlatform.PlatformAbstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.TestPlatform.Utilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.VisualStudio.TestPlatform.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.Tests.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.Tests.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.Tests.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.Tests.runtimeconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.runtimeconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.staticwebassets.endpoints.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/WebScraper.staticwebassets.runtime.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/testhost.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/xunit.abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/xunit.assert.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/xunit.core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/xunit.execution.dotnet.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/xunit.runner.visualstudio.testadapter.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScrap.DBEAB51B.Up2Date" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.genruntimeconfig.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/WebScraper.Tests.sourcelink.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/ref/WebScraper.Tests.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/Debug/net10.0/refint/WebScraper.Tests.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/WebScraper.Tests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/WebScraper.Tests.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/WebScraper.Tests.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebScraper.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +167,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2bace17e0c1f2e361e2e350c680f3c2bb9614ed1b0f6cf9d565b474c73e15/CollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/83cbc9668340cfcab9d17225ada38fa3579cd4fa511a48dac6f047dc9b72eedd/DefaultInterpolatedStringHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.claude/settings.local.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/ClientApp/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/bin/Debug/net10.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebScraper.Tests/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/global.json" root0="FORCE_HIGHLIGHTING" />
@@ -188,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780830610978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding logging and exception handling">
+      <option name="closed" value="true" />
+      <created>1780868977580</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780868977580</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +331,8 @@
     <MESSAGE value="Cache added and filtering by star rating" />
     <MESSAGE value="prettier applied" />
     <MESSAGE value="moved styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved styling" />
+    <MESSAGE value="Adding logging and exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding logging and exception handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
