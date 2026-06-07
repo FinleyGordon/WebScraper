@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/cityselector.tsx","./src/components/solicitorlist.tsx","./src/constants/cities.ts","./src/hooks/usescrape.ts","./src/types/index.ts"],"version":"5.7.3"}

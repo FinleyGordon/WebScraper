@@ -27,9 +27,9 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.MapGet("/api/solicitors", async (ScraperService scraper, CancellationToken ct) =>
+app.MapGet("/api/solicitors", async (ScraperService scraper, string city, CancellationToken ct) =>
 {
-    var result = await scraper.RunAsync(ct);
+    var result = await scraper.RunAsync(city, ct);
     return Results.Ok(result);
 });
 

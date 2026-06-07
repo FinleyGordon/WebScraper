@@ -44,9 +44,9 @@ public sealed class ScraperService(
         return result;
     }
 
-    public Task<ScrapeResult> RunAsync(CancellationToken cancellationToken = default)
+    public Task<ScrapeResult> RunAsync(string city, CancellationToken cancellationToken = default)
     {
-        var url = $"{config.BaseUrl.TrimEnd('/')}/bristol-solicitors.html";
+        var url = $"{config.BaseUrl.TrimEnd('/')}/{city.ToLowerInvariant()}-solicitors.html";
         return LoadScrapeResults(url, cancellationToken);
     }
 }
