@@ -14,17 +14,23 @@ public sealed class SolicitorScraperService(
     ISolicitorCache cache,
     ILogger<SolicitorScraperService> logger)
 {
+    private readonly HashSet<string> _allowedCities =
+        new(config.AllowedCities, StringComparer.OrdinalIgnoreCase);
+
     public async Task<ScrapeResult> RetrieveSolicitors(string city, CancellationToken cancellationToken = default)
     {
-        var normalisedCity = city.ToLowerInvariant().Trim();
+        var normalisedCity = city.Trim();
+
+        if (!_allowedCities.Contains(normalisedCity))
+            throw new CityNotSupportedException(normalisedCity);
 
         if (cache.TryGet(normalisedCity, out var cached) && cached is not null)
         {
-            logger.LogDebug("Cache hit for city {City}", normalisedCity);
             return cached;
         }
 
-        var url = string.Format(config.SolicitorsLocationUrl, normalisedCity);
+        var slug = Uri.EscapeDataString(normalisedCity.ToLowerInvariant());
+        var url = $"{config.BaseUrl.TrimEnd('/')}/{slug}-solicitors.html";
         var result = await LoadScrapeResults(url, cancellationToken);
 
         cache.Set(normalisedCity, result);

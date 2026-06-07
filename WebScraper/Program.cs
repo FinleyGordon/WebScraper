@@ -39,6 +39,10 @@ app.MapGet("/api/solicitors", async (SolicitorScraperService solicitorScraper, s
         var result = await solicitorScraper.RetrieveSolicitors(city, ct);
         return Results.Ok(result);
     }
+    catch (CityNotSupportedException ex)
+    {
+        return Results.BadRequest(new { error = ex.Message });
+    }
     catch (ScrapeException ex)
     {
         return Results.Problem(

@@ -10,7 +10,8 @@ public sealed class SolicitorScraperServiceTests
 {
     private static readonly ScraperConfiguration Config = new()
     {
-        SolicitorsLocationUrl = "https://solicitors.com/{0}-solicitors.html",
+        BaseUrl = "https://solicitors.com",
+        AllowedCities = ["London", "New York"],
     };
 
     private static SolicitorScraperService CreateService(
@@ -60,7 +61,20 @@ public sealed class SolicitorScraperServiceTests
 
         await service.RetrieveSolicitors("  New York  ");
 
-        Assert.Equal("https://solicitors.com/New%20York-solicitors.html", fetcher.LastUrl);
+        Assert.Equal("https://solicitors.com/new%20york-solicitors.html", fetcher.LastUrl);
+    }
+
+    [Fact]
+    public async Task RetrieveSolicitors_ThrowsForCityNotInAllowlist()
+    {
+        var fetcher = new StubFetcher("<html/>");
+        var service = CreateService(fetcher, new StubCache());
+
+        var ex = await Assert.ThrowsAsync<CityNotSupportedException>(
+            () => service.RetrieveSolicitors("Atlantis"));
+
+        Assert.Equal("Atlantis", ex.City);
+        Assert.Equal(0, fetcher.CallCount);
     }
 
     [Fact]
