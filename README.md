@@ -40,6 +40,22 @@ The app will be available at `http://localhost:5173`. API requests are proxied a
 
 ---
 
+## Testing
+
+Unit tests live in the `WebScraper.Tests` project (xUnit). Run them from the repository root:
+
+```bash
+dotnet test
+```
+
+The suite covers:
+
+- **HTML parsing** — `SolicitorHtmlParser` is run end-to-end against an HTML fixture through the real field extractors, verifying field extraction, de-duplication, and that blocks without a name are skipped.
+- **Field extractors** — name decoding, phone sanitising, review star parsing, and website matching.
+- **Scrape pipeline** — `SolicitorScraperService` with stubbed dependencies, covering cache hits/misses, city normalisation, and upstream failures surfacing as a `ScrapeException`.
+
+---
+
 ## Running in Production
 
 A production build bundles the React app into `wwwroot/` and serves it from the .NET host — no separate frontend process needed.
