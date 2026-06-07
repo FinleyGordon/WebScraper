@@ -1,13 +1,30 @@
+import { useEffect, useMemo } from 'react'
 import type {Solicitor} from '../types'
 
 interface Props {
   solicitors: Solicitor[]
+  ratingFilter: number | undefined
+  onFilteredCountChange?: (count: number) => void
 }
 
-export default function SolicitorList({ solicitors }: Props) {
+export default function SolicitorList({ solicitors, ratingFilter, onFilteredCountChange }: Props) {
+  const filtered = useMemo(() =>
+    solicitors.filter(s => {
+      if (ratingFilter == undefined || ratingFilter == 0) return true
+      if (s.reviews?.starRating == undefined) return false
+      return s.reviews.starRating >= ratingFilter
+    }),
+    [solicitors, ratingFilter]
+  )
+
+  useEffect(() => {
+    onFilteredCountChange?.(filtered.length)
+  }, [filtered.length])
+
   return (
     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-      {solicitors.map((s, i) => (
+      {filtered
+          .map((s, i) => (
         <li
           key={i}
           style={{

@@ -11,6 +11,8 @@ var scraperConfig = builder.Configuration
     .Get<ScraperConfiguration>()!;
 
 builder.Services.AddSingleton(scraperConfig);
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<ISolicitorCache, MemorySolicitorCache>();
 builder.Services.AddHttpClient<IHttpFetcher, HttpFetcher>();
 builder.Services.AddTransient<IFieldExtractor, NameExtractor>();
 builder.Services.AddTransient<IFieldExtractor, AddressExtractor>();

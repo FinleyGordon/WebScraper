@@ -18,7 +18,8 @@ namespace WebScraper.Services;
 public sealed class ScraperService(
     IHttpFetcher fetcher,
     IHtmlParser<Solicitor> parser,
-    ScraperConfiguration config)
+    ScraperConfiguration config,
+    ISolicitorCache cache)
 {
     /// <summary>Runs the full pipeline: fetch → parse → export.</summary>
     private async Task<ScrapeResult> LoadScrapeResults(
@@ -41,9 +42,15 @@ public sealed class ScraperService(
         return result;
     }
 
-    public Task<ScrapeResult> RunAsync(string city, CancellationToken cancellationToken = default)
+    public async Task<ScrapeResult> RunAsync(string city, CancellationToken cancellationToken = default)
     {
+        if (cache.TryGet(city, out var cached) && cached is not null)
+            return cached;
+
         var url = $"{config.BaseUrl.TrimEnd('/')}/{city.ToLowerInvariant()}-solicitors.html";
-        return LoadScrapeResults(url, cancellationToken);
+        var result = await LoadScrapeResults(url, cancellationToken);
+
+        cache.Set(city, result);
+        return result;
     }
 }
