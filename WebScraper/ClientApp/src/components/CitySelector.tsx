@@ -6,16 +6,18 @@ interface Props {
   disabled?: boolean
 }
 
-export default function CitySelector({ value, onChange, disabled }: Props) {
+export default function CitySelector({value, onChange, disabled}: Props) {
   return (
     <select
       value={value}
       onChange={e => onChange(e.target.value as City)}
       disabled={disabled}
-      style={{ padding: '0.5rem', fontSize: '1rem', cursor: disabled ? 'not-allowed' : 'pointer' }}
+      style={{padding: '0.5rem', fontSize: '1rem', cursor: disabled ? 'not-allowed' : 'pointer'}}
     >
       {CITIES.map(c => (
-        <option key={c} value={c}>{c}</option>
+        <option key={c} value={c}>
+          {c}
+        </option>
       ))}
     </select>
   )

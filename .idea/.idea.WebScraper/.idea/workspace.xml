@@ -14,15 +14,17 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="tidy">
-      <change afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" afterDir="false" />
+    <list default="true" id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="Cache added and filtering by star rating">
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/CitySelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/CitySelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/SolicitorList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/SolicitorList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/tsconfig.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/tsconfig.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/src/Services/ScraperService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/src/Services/ScraperService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/wwwroot/assets/index-Bn_iXurl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/wwwroot/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/constants/cities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/constants/cities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/hooks/useScrape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/hooks/useScrape.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/83cbc9668340cfcab9d17225ada38fa3579cd4fa511a48dac6f047dc9b72eedd/DefaultInterpolatedStringHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.claude/settings.local.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/global.json" root0="FORCE_HIGHLIGHTING" />
@@ -45,11 +48,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.format.executor": "Run",
     "npm.install.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/fingordon/Repos/WebScraper/WebScraper/ClientApp/node_modules/typescript/lib"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.format">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/WebScraper/ClientApp/package.json" />
       <command value="run" />
@@ -70,6 +75,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/WebScraper/ClientApp/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="install" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/WebScraper/ClientApp/package.json" />
       <command value="run" />
@@ -82,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.install" />
@@ -97,13 +113,22 @@
       <option name="project" value="LOCAL" />
       <updated>1780818800311</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cache added and filtering by star rating">
+      <option name="closed" value="true" />
+      <created>1780824691979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1780824691979</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tidy" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidy" />
+    <MESSAGE value="Cache added and filtering by star rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cache added and filtering by star rating" />
   </component>
 </project>
