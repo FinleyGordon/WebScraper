@@ -29,9 +29,6 @@ public sealed class ScraperService(
 
         var html = await fetcher.FetchAsync(url, cancellationToken);
 
-        if (config.FetchDelayMs > 0)
-            await Task.Delay(config.FetchDelayMs, cancellationToken);
-
         var solicitors = parser.Parse(html);
 
         var result = new ScrapeResult
