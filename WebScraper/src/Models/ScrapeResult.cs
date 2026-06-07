@@ -9,6 +9,4 @@ public sealed class ScrapeResult
     public string SourceUrl { get; init; } = string.Empty;
     public DateTime ScrapedAt { get; init; } = DateTime.UtcNow;
     public IReadOnlyList<Solicitor> Solicitors { get; init; } = [];
-    public int TotalFound => Solicitors.Count;
-    public bool IsSuccess => Solicitors.Count > 0;
 }

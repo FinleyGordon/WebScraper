@@ -8,13 +8,8 @@ namespace WebScraper.Parsers;
 
 /// <summary>
 /// Parses a solicitor directory results page into a list of <see cref="Solicitor"/> objects.
-///
-///   1. Split the page HTML blocks.
-///   2. Run each registered Extractor
-///   3. Assemble raw strings domain objects.
-///   4. Deduplicate by Name + Phone
 /// </summary>
-public sealed class SolicitorHtmlParser(IEnumerable<IFieldExtractor> extractors) : IHtmlParser<Solicitor>
+public sealed partial class SolicitorHtmlParser(IEnumerable<IFieldExtractor> extractors) : IHtmlParser<Solicitor>
 {
     private const string BlockPattern =
         """<div class="result-item[^"]*">.*?(?=<div class="result-item|<div class="banner|</div>\s*</div>\s*</div>)""";
@@ -91,9 +86,12 @@ public sealed class SolicitorHtmlParser(IEnumerable<IFieldExtractor> extractors)
         return raw
             .Split('\n', StringSplitOptions.RemoveEmptyEntries)
             .Select(line => line.Trim())
-            .Where(line => line.Length > 0 && !Regex.IsMatch(line, @"hold the following", RegexOptions.IgnoreCase))
+            .Where(line => line.Length > 0 && !QualityMarksPretenseRegex().IsMatch(line))
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToList()
             .AsReadOnly();
     }
+
+    [GeneratedRegex(@"hold the following", RegexOptions.IgnoreCase, "en-GB")]
+    private static partial Regex QualityMarksPretenseRegex();
 }

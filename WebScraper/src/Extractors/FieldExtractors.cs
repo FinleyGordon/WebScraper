@@ -65,8 +65,8 @@ public sealed class ReviewExtractor : IFieldExtractor
         if (!revBlock.Success) return null;
 
         var fragment  = revBlock.Groups[1].Value;
-        var fullStars = StarFull.Matches(fragment).Count;
-        var halfStars = StarHalf.Matches(fragment).Count;
+        var fullStars = StarFull.Count(fragment);
+        var halfStars = StarHalf.Count(fragment);
         var rating    = fullStars + (halfStars * 0.5);
 
         var countMatch = CountExpr.Match(fragment);

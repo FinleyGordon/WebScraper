@@ -22,17 +22,30 @@ builder.Services.AddTransient<IFieldExtractor, DescriptionExtractor>();
 builder.Services.AddTransient<IFieldExtractor, ReviewExtractor>();
 builder.Services.AddTransient<IFieldExtractor, QualityMarksExtractor>();
 builder.Services.AddTransient<IHtmlParser<Solicitor>, SolicitorHtmlParser>();
-builder.Services.AddTransient<ScraperService>();
+builder.Services.AddTransient<SolicitorScraperService>();
 
 var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.MapGet("/api/solicitors", async (ScraperService scraper, string city, CancellationToken ct) =>
+app.MapGet("/api/solicitors", async (SolicitorScraperService solicitorScraper, string? city, CancellationToken ct) =>
 {
-    var result = await scraper.RunAsync(city, ct);
-    return Results.Ok(result);
+    if (string.IsNullOrWhiteSpace(city))
+        return Results.BadRequest(new { error = "Query parameter 'city' is required." });
+
+    try
+    {
+        var result = await solicitorScraper.RetrieveSolicitors(city, ct);
+        return Results.Ok(result);
+    }
+    catch (ScrapeException ex)
+    {
+        return Results.Problem(
+            title: "Upstream directory unavailable",
+            detail: ex.Message,
+            statusCode: StatusCodes.Status502BadGateway);
+    }
 });
 
 app.MapFallbackToFile("index.html");

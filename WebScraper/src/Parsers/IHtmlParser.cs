@@ -1,6 +1,6 @@
 namespace WebScraper.Parsers;
 
-public interface IHtmlParser<T>
+public interface IHtmlParser<out T>
 {
     IReadOnlyList<T> Parse(string html);
 }
