@@ -1,0 +1,51 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f0f4ff;
+  color: #111;
+}
+
+.app {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 { color: #1a6fc4; }
+
+select, button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background: #1a6fc4;
+  color: #fff;
+  border-color: #1a6fc4;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.controls { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+.solicitor-list { list-style: none; padding: 0; margin: 0; }
+
+.solicitor-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.name { font-weight: bold; margin: 0 0 0.25rem; }
+.detail { margin: 0.15rem 0; color: #444; font-size: 0.9rem; }
+.rating { color: #666; font-size: 0.85rem; }
+.quality-marks { color: #1a6fc4; font-size: 0.85rem; }
+.error-banner { color: red; }
+.result-meta { color: #555; font-size: 0.9rem; }

@@ -10,7 +10,6 @@ export default function FilterSelector({value, onChange, disabled}: Props) {
       value={value}
       onChange={e => onChange(Number(e.target.value))}
       disabled={disabled}
-      style={{padding: '0.5rem', fontSize: '1rem', cursor: disabled ? 'not-allowed' : 'pointer'}}
       defaultValue={0}
     >
       <option value={0}>Any</option>

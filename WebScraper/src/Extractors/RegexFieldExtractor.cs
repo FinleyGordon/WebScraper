@@ -22,10 +22,6 @@ public abstract class RegexFieldExtractor : IFieldExtractor
         return match.Success ? Sanitise(match.Groups[1].Value) : null;
     }
 
-    /// <summary>
-    /// Post-processes the raw captured value.
-    /// Override for field-specific cleaning (e.g. phone normalisation).
-    /// </summary>
     protected virtual string Sanitise(string raw) =>
         HtmlHelper.DecodeAndStrip(raw).Trim();
 }

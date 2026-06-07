@@ -6,7 +6,6 @@ public sealed class NameExtractor : RegexFieldExtractor
 {
     public override string FieldName => "Name";
 
-    // Matches the firm name inside <span class="h2">
     protected override string Pattern =>
         @"<span class=""h2"">\s*([^<]+)";
 }
@@ -21,7 +20,6 @@ public sealed class PhoneExtractor : RegexFieldExtractor
 {
     public override string FieldName => "Phone";
 
-    // href="tel:…" is the canonical phone source — avoids display-format variation
     protected override string Pattern => @"href=""tel:([^""]+)""";
 
     protected override string Sanitise(string raw) =>
@@ -32,7 +30,6 @@ public sealed class WebsiteExtractor : RegexFieldExtractor
 {
     public override string FieldName => "Website";
 
-    // Only external links (http/https), skipping internal enquiry links
     protected override string Pattern =>
         @"href=""(https?://[^""]+)""[^>]*rel=""nofollow""";
 
@@ -51,9 +48,6 @@ public sealed class DescriptionExtractor : RegexFieldExtractor
     }
 }
 
-/// <summary>
-/// Composite extractor: reads both star rating and review count together
-/// </summary>
 public sealed class ReviewExtractor : IFieldExtractor
 {
     public string FieldName => "Reviews";
@@ -80,9 +74,6 @@ public sealed class ReviewExtractor : IFieldExtractor
     }
 }
 
-/// <summary>
-/// Extracts Law Society accreditation marks from the greentick tooltip.
-/// </summary>
 public sealed class QualityMarksExtractor : IFieldExtractor
 {
     public string FieldName => "QualityMarks";

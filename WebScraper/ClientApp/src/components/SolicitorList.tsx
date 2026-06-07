@@ -23,41 +23,24 @@ export default function SolicitorList({solicitors, ratingFilter, onFilteredCount
   }, [filtered.length])
 
   return (
-    <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+    <ul className="solicitor-list">
       {filtered.map((s, i) => (
-        <li
-          key={i}
-          style={{
-            background: '#fff',
-            border: '1px solid #ddd',
-            borderRadius: 6,
-            padding: '1rem 1.25rem',
-            marginBottom: '0.75rem',
-          }}
-        >
-          <strong style={{fontSize: '1.05rem'}}>{s.name}</strong>
-
-          <p style={{margin: '0.35rem 0 0', color: '#444'}}>{s.address}</p>
-          <p style={{margin: '0.2rem 0 0', color: '#444'}}>{s.phone}</p>
-
+        <li key={i} className="solicitor-card">
+          <p className="name">{s.name}</p>
+          {s.address && <p className="detail">{s.address}</p>}
+          {s.phone && <p className="detail">{s.phone}</p>}
           {s.website && (
-            <p style={{margin: '0.2rem 0 0'}}>
-              <a href={s.website} target="_blank" rel="noreferrer">
-                {s.website}
-              </a>
+            <p className="detail website">
+              <a href={s.website} target="_blank" rel="noreferrer">{s.website}</a>
             </p>
           )}
-
           {s.reviews && (
-            <p style={{margin: '0.35rem 0 0', color: '#666', fontSize: '0.9rem'}}>
+            <p className="rating">
               {s.reviews.starRating.toFixed(1)} stars ({s.reviews.reviewCount} reviews)
             </p>
           )}
-
           {s.qualityMarks.length > 0 && (
-            <p style={{margin: '0.35rem 0 0', fontSize: '0.85rem', color: '#2a7'}}>
-              {s.qualityMarks.join(' · ')}
-            </p>
+            <p className="quality-marks">{s.qualityMarks.join(' · ')}</p>
           )}
         </li>
       ))}

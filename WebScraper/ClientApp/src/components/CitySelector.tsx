@@ -12,7 +12,6 @@ export default function CitySelector({value, onChange, disabled}: Props) {
       value={value}
       onChange={e => onChange(e.target.value as City)}
       disabled={disabled}
-      style={{padding: '0.5rem', fontSize: '1rem', cursor: disabled ? 'not-allowed' : 'pointer'}}
     >
       {CITIES.map(c => (
         <option key={c} value={c}>
