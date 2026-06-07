@@ -14,17 +14,8 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="Cache added and filtering by star rating">
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/CitySelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/CitySelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/FilterSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/SolicitorList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/components/SolicitorList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/constants/cities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/constants/cities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/hooks/useScrape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/hooks/useScrape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebScraper/ClientApp/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/WebScraper/ClientApp/src/main.tsx" afterDir="false" />
+    <list default="true" id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="prettier applied">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebScraper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebScraper/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "FinleyGordon"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/FinleyGordon/WebScraper.git",
+    "accountId": "c4d07d4f-599f-42d9-80f2-90dd7f1e7266"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/83cbc9668340cfcab9d17225ada38fa3579cd4fa511a48dac6f047dc9b72eedd/DefaultInterpolatedStringHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.claude/settings.local.json" root0="FORCE_HIGHLIGHTING" />
@@ -42,16 +45,38 @@
     <setting file="file://$PROJECT_DIR$/global.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="3EnrEFRIIOf1vXipM5jqsYi87o8" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.format.executor": "Run",
     "npm.install.executor": "Run",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/fingordon/Repos/WebScraper/WebScraper/ClientApp/node_modules/typescript/lib"
+    "ts.external.directory.path": "/Users/fingordon/Repos/WebScraper/WebScraper/ClientApp/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="npm.format">
@@ -121,14 +146,53 @@
       <option name="project" value="LOCAL" />
       <updated>1780824691979</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="prettier applied">
+      <option name="closed" value="true" />
+      <created>1780824969470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780824969470</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a300f6d1-454d-40af-a893-f88e7c4107f3" name="Changes" comment="prettier applied" />
+      <created>1780825061894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780825061894</updated>
+      <workItem from="1780825064029" duration="1676000" />
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="tidy" />
     <MESSAGE value="Cache added and filtering by star rating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cache added and filtering by star rating" />
+    <MESSAGE value="prettier applied" />
+    <option name="LAST_COMMIT_MESSAGE" value="prettier applied" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
