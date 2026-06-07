@@ -16,7 +16,7 @@ public sealed class SolicitorScraperService(
 {
     public async Task<ScrapeResult> RetrieveSolicitors(string city, CancellationToken cancellationToken = default)
     {
-        var normalisedCity = city.Trim();
+        var normalisedCity = city.ToLowerInvariant().Trim();
 
         if (cache.TryGet(normalisedCity, out var cached) && cached is not null)
         {
@@ -24,7 +24,7 @@ public sealed class SolicitorScraperService(
             return cached;
         }
 
-        var url = string.Format(config.SolicitorsLocationUrl, Uri.EscapeDataString(normalisedCity));
+        var url = string.Format(config.SolicitorsLocationUrl, normalisedCity);
         var result = await LoadScrapeResults(url, cancellationToken);
 
         cache.Set(normalisedCity, result);

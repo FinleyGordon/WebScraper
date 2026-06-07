@@ -6,5 +6,5 @@ public sealed class ScraperConfiguration
 
     public string BaseUrl { get; init; } = "https://www.solicitors.com/";
     
-    public string SolicitorsLocationUrl { get; init; } = "https://solicitors.com/{0}-solicitors.html";
+    public string SolicitorsLocationUrl { get; init; } = "https://www.solicitors.com/{0}-solicitors.html";
 }
