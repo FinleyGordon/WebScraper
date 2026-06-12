@@ -6,10 +6,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="src\" />
-    </ItemGroup>
-
     <!-- Install npm deps when node_modules is missing -->
     <Target Name="NpmInstall" BeforeTargets="Build"
             Condition="!Exists('$(ProjectDir)ClientApp/node_modules')">

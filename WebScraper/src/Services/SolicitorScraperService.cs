@@ -1,4 +1,5 @@
 using WebScraper.Configuration;
+using WebScraper.Exceptions;
 using WebScraper.Models;
 using WebScraper.Parsers;
 

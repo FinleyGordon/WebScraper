@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging.Abstractions;
 using WebScraper.Configuration;
+using WebScraper.Exceptions;
 using WebScraper.Models;
 using WebScraper.Parsers;
 using WebScraper.Services;
@@ -20,7 +21,7 @@ public sealed class SolicitorScraperServiceTests
         IHtmlParser<Solicitor>? parser = null) =>
         new(
             fetcher,
-            parser ?? new StubParser([new Solicitor { Name = "Acme Law" }]),
+            parser ?? new StubParser([new Solicitor { Name = "Infotrack Law" }]),
             Config,
             cache,
             NullLogger<SolicitorScraperService>.Instance);
